@@ -1,0 +1,65 @@
+{
+  "dataset": {
+    "devices": 100,
+    "interval_s": 600,
+    "days": 365,
+    "seed": 20261031,
+    "anomaly_rate": 0.0002,
+    "jitter_s": 10
+  },
+  "chunk_interval": "7 days",
+  "slice_days": 1,
+  "queries": {
+    "device": 42,
+    "reps": 7,
+    "warmup": 2,
+    "anomaly_lo": -10,
+    "anomaly_hi": 45
+  },
+  "sub": {
+    "devices": 100,
+    "days": 84,
+    "chunk_intervals": [
+      "1 day",
+      "7 days",
+      "30 days",
+      "90 days"
+    ]
+  },
+  "cold": {
+    "keep_days": 90,
+    "bucket": "telemetry-cold"
+  },
+  "scales": {
+    "smoke": {
+      "devices": 10,
+      "days": 21,
+      "sub_devices": 10,
+      "sub_days": 21,
+      "chunk_intervals": [
+        "1 day",
+        "7 days",
+        "30 days"
+      ],
+      "keep_days": 7,
+      "reps": 3,
+      "warmup": 1
+    },
+    "quick": {
+      "devices": 20,
+      "days": 90,
+      "sub_devices": 20,
+      "sub_days": 60,
+      "chunk_intervals": [
+        "1 day",
+        "7 days",
+        "30 days",
+        "90 days"
+      ],
+      "keep_days": 30,
+      "reps": 5,
+      "warmup": 1
+    },
+    "full": {}
+  }
+}
